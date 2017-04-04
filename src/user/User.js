@@ -11,7 +11,7 @@ export default class User extends React.Component {
             <p>User not found, please modify your search term or try again later.</p>
          </div>
       );
-    }else{
+    } else {
       return (
         <section>
           <div>
@@ -22,9 +22,9 @@ export default class User extends React.Component {
           </div>
           <div>
             <ul>
-              <li><a href={`${data.homeUrl}?tab=repositories`}><i>{data.repos}</i> <span>Public Repositories</span></a></li>
-              <li><a href={`${data.homeUrl}/followers`}><span>Followed by </span> <i>{data.followers}</i> Users</a></li>
-              <li><a href={`${data.homeUrl}/following`}><span>Following</span> <i>{data.following}</i> Users </a></li>
+              <li><a href={`${data.homeUrl}?tab=repositories`}>{data.repos} <span>Public Repositories</span></a></li>
+              <li><a href={`${data.homeUrl}/followers`}><span>Followed by </span> {data.followers} Users</a></li>
+              <li><a href={`${data.homeUrl}/following`}><span>Following</span> {data.following} Users </a></li>
             </ul>
           </div>
         </section>

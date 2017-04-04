@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
-import { Utilites } from 'react-bootstrap';
+
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -68,7 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar>
+        <Navbar fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="#">GitHub</a>
@@ -85,12 +86,15 @@ class App extends React.Component {
             </Navbar.Form>
           </Navbar.Collapse>
         </Navbar>
-        <span className="col-xs-6 text-right">
-         <User data={this.state} />
-        </span>
-        <span className="col-xs-6">
-         <Repositories data={this.state}/>
-        </span>
+        <div className="body-container">
+          <div className="col-xs-12 col-sm-6 text-right affix">
+            <User data={this.state} />
+          </div>
+          <div className="hidden-xs col-sm-6"></div>
+          <div className="col-xs-12 col-sm-6">
+            <Repositories data={this.state}/>
+          </div>
+        </div>
       </div>
     )
   }

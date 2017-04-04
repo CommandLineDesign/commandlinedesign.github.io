@@ -27,3 +27,15 @@
 ul {
   list-style: none;
 }
+
+li{
+  margin-bottom: 4px;
+}
+
+.body-container{
+  margin-top: 3.5em;
+}
+
+.body-container button{
+  margin-bottom: 2px;
+}
